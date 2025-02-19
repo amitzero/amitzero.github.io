@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body class="dark-mode">
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="#home" class="logo"><i class="fas fa-laptop-code"></i> Amit's Portfolio</a>
+                <ul>
+                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+                    <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+            <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Hi, I'm Amit – Software Architect, System Designer, and Developer</h1>
+        <p class="typing-effect"></p>
+        <button onclick="window.location.href='Amit_Hasan-Resume.pdf'" class="cta-button">
+            <i class="fas fa-download"></i> Download Resume
+        </button>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-header">
+            <h2>About Me</h2>
+            <img src="https://avatars.githubusercontent.com/u/66168865" alt="Amit's Photo" class="profile-photo">
+        </div>
+        <p>I am Amit, a Software Architect, System Designer, and Developer with expertise in full-stack development, networking, cybersecurity, and IoT solutions. I have a deep passion for building scalable systems, efficient architectures, and high-performance applications.</p>
+        <p>I specialize in designing end-to-end solutions, from backend architecture to frontend UI, ensuring efficiency, security, and performance in all my projects. My expertise spans network planning, cloud computing, embedded systems, and mobile/web app development.</p>
+        <p><strong>What I Do:</strong></p>
+        <ul class="what-i-do">
+            <li>✅ Software Development: Full-stack development (Frontend & Backend)</li>
+            <li>✅ System Architecture & Design: Structuring scalable and secure systems</li>
+            <li>✅ IoT Solutions: Building smart devices with microcontrollers, and cloud integration</li>
+            <li>✅ Networking & Cybersecurity: VLANs, Servers, Firewalls, Admin Tasks</li>
+            <li>✅ Cloud & Backend Development: Firebase, Google Cloud, DJango, NestJS, ExpressJS, Docker, Kubernetes, Microservices</li>
+            <li>✅ Mobile & Web Development: Native Android, Flutter, React, NextJS, HTML, CSS</li>
+            <li>✅ AI & Automation: Machine learning, process automation, scripting</li>
+        </ul>
+        <p>With a strong background in problem-solving, team leadership, and project management, I ensure that every project I work on is optimized for performance, security, and scalability.</p>
+        <p><strong>Technologies & Tools I Use:</strong></p>
+        <ul class="tech-tools">
+            <li>🔹 Programming Languages: C, C++, C#, Java, Kotlin, Python, JavaScript, TypeScript, PHP, Dart</li>
+            <li>🔹 Development Frameworks & IDEs: Flutter, React, Unity 3D, Android Studio, Arduino Studio, Kali Linux, Visual Studio</li>
+            <li>🔹 Database & Cloud Services: Firebase Firestore, Firebase Functions, Cloud Storage, MySQL, Postgres, MongoDB</li>
+            <li>🔹 Networking & Security: Windows Server, Active Directory, VLANs, Firewalls</li>
+            <li>🔹 DevOps & Containers: Docker, Kubernetes</li>
+        </ul>
+        <p><strong>Why Work With Me?</strong></p>
+        <p>I am a self-motivated, goal-oriented professional who believes in continuous learning and innovation. I take a big-picture approach to problem-solving while ensuring that the smallest details are handled efficiently.</p>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2 class="skills-title">Skills</h2>
+        <div class="skills-category-container">
+            <div class="skills-category">
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li><i class="fab fa-cuttlefish"></i> C</li>
+                    <li><i class="fab fa-cuttlefish"></i> C++</li>
+                    <li><i class="fab fa-cuttlefish"></i> C#</li>
+                    <li><i class="fab fa-java"></i> Java</li>
+                    <li><i class="fab fa-android"></i> Kotlin</li>
+                    <li><i class="fab fa-python"></i> Python</li>
+                    <li><i class="fab fa-js"></i> JavaScript</li>
+                    <li><i class="fab fa-js"></i> TypeScript</li>
+                    <li><i class="fab fa-php"></i> PHP</li>
+                    <li><i class="fab fa-digital-ocean"></i> Dart</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h3>Frameworks & Development Tools</h3>
+                <ul>
+                    <li><i class="fab fa-flutter"></i> Flutter</li>
+                    <li><i class="fas fa-database"></i> Firebase</li>
+                    <li><i class="fab fa-docker"></i> Docker</li>
+                    <li><i class="fab fa-arduino"></i> Arduino</li>
+                    <li><i class="fab fa-unity"></i> Unity 3D</li>
+                    <li><i class="fab fa-android"></i> Android Studio</li>
+                    <li><i class="fab fa-microsoft"></i> Visual Studio</li>
+                    <li><i class="fab fa-linux"></i> Kali Linux</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h3>Professional Software & Design Tools</h3>
+                <ul>
+                    <li><i class="fab fa-figma"></i> Figma (UI/UX)</li>
+                    <li><i class="fab fa-canva"></i> Canva</li>
+                    <li><i class="fas fa-file-excel"></i> Microsoft Excel</li>
+                    <li><i class="fas fa-file-word"></i> Microsoft Word</li>
+                    <li><i class="fas fa-database"></i> Microsoft Access</li>
+                    <li><i class="fas fa-file-powerpoint"></i> Microsoft PowerPoint</li>
+                    <li><i class="fab fa-google"></i> Google Sheets</li>
+                    <li><i class="fab fa-google"></i> Google Docs</li>
+                    <li><i class="fab fa-google"></i> Google Slides</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h3>Networking & Cybersecurity Knowledge</h3>
+                <ul>
+                    <li><i class="fas fa-network-wired"></i> Network planning</li>
+                    <li><i class="fas fa-sitemap"></i> Subnetting</li>
+                    <li><i class="fas fa-server"></i> DHCP</li>
+                    <li><i class="fas fa-globe"></i> DNS</li>
+                    <li><i class="fas fa-route"></i> Routers</li>
+                    <li><i class="fas fa-exchange-alt"></i> Switches</li>
+                    <li><i class="fas fa-server"></i> Servers</li>
+                    <li><i class="fab fa-windows"></i> Windows Server</li>
+                    <li><i class="fas fa-users"></i> Active Directory</li>
+                    <li><i class="fas fa-shield-alt"></i> Cybersecurity best practices</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li><i class="fas fa-lightbulb"></i> Problem-solving</li>
+                    <li><i class="fas fa-users"></i> Team leadership</li>
+                    <li><i class="fas fa-headset"></i> Active listening</li>
+                    <li><i class="fas fa-rocket"></i> Self-starter</li>
+                    <li><i class="fas fa-search"></i> SEO</li>
+                    <li><i class="fas fa-chart-line"></i> Data analysis</li>
+                    <li><i class="fas fa-robot"></i> Automation tools</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>ZeCon (Messaging App for Zero Inn)</h3>
+            <p>An email-based messaging app similar to WhatsApp, but without requiring phone numbers or status updates.</p>
+            <p><strong>Tech Stack:</strong> Flutter, Firebase (Firestore, Firebase Auth, Firebase Functions)</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Secure email-based messaging</li>
+                <li>End-to-end encryption</li>
+                <li>Real-time chat</li>
+                <li>Cross-platform (Android, iOS, Web)</li>
+            </ul>
+            <a href="https://github.com/amit/zecon" class="project-link">GitHub</a>
+        </div>
+        <div class="project">
+            <h3>Orang Asli Student Transportation & Attendance System</h3>
+            <p>A government-backed system for tracking school buses and students. It enables teachers to scan student IDs for attendance and provides real-time tracking of school transportation.</p>
+            <p><strong>Tech Stack:</strong> Flutter (Mobile App + Web Dashboard), Firebase (Firestore, Firebase Functions, Firebase Auth)</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Teacher App: Scans RFID/QR codes for attendance</li>
+                <li>Driver App: Tracks students onboard</li>
+                <li>Admin Dashboard: Shows live vehicle locations, trip data, statistics, and reports</li>
+                <li>Firebase Functions: Automatic backups, real-time indexing for fast search</li>
+            </ul>
+            <a href="#" class="project-link">GitHub</a>
+        </div>
+        <div class="project">
+            <h3>Buraq Oil Tanker Tracking System</h3>
+            <p>A tracking system for Buraq Oil Company to monitor tankers, track orders, and prevent deviations from assigned routes.</p>
+            <p><strong>Tech Stack:</strong> Flutter (Web + Mobile App), Firebase (Firestore, Firebase Functions)</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Tracks tanker locations in real time</li>
+                <li>Sends alerts if a tanker deviates from route</li>
+                <li>Displays order details, fuel type, delivery status</li>
+                <li>Role-based access (Admins see full data, Moderators have restricted views)</li>
+            </ul>
+            <a href="#" class="project-link">GitHub</a>
+        </div>
+        <div class="project">
+            <h3>IoT-Based Smart Attendance System (ESP32 + RFID) [Future Implementation]</h3>
+            <p>A planned smart attendance system that will use RFID tags & IoT to mark student attendance in schools.</p>
+            <p><strong>Tech Stack:</strong> ESP32 microcontroller, Firebase (for cloud database)</p>
+            <p><strong>Planned Features:</strong></p>
+            <ul>
+                <li>RFID scanning for student check-ins</li>
+                <li>Real-time data upload using IoT (No Wi-Fi required)</li>
+                <li>Integration with Orang Asli Student Transportation System</li>
+            </ul>
+            <a href="#" class="project-link">GitHub</a>
+        </div>
+        <div class="project">
+            <h3>Online Course Management App (Not Fully Completed)</h3>
+            <p>A mobile app that provides an online learning platform with courses, quizzes, and progress tracking.</p>
+            <p><strong>Tech Stack:</strong> Flutter, Firebase (Firestore, Firebase Auth, Firebase Storage)</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>User authentication (Email/Google Sign-in)</li>
+                <li>Enroll in courses, watch videos, complete quizzes</li>
+                <li>Firebase push notifications for updates</li>
+                <li>Progress tracking and certification system</li>
+            </ul>
+            <a href="#" class="project-link">GitHub</a>
+        </div>
+        <div class="project">
+            <h3>Modular House Design System (Currently in Development)</h3>
+            <p>A software tool for designing prefabricated houses with customizable layouts and materials.</p>
+            <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>3D visualization of house designs</li>
+                <li>Customizable options for materials and layouts</li>
+                <li>Optimized for 70–100 year durability in Bangladesh</li>
+            </ul>
+            <a href="#" class="project-link">GitHub</a>
+        </div>
+        <div class="project">
+            <h3>Other Completed Projects</h3>
+            <ul>
+                <li>Printer Firmware</li>
+                <li>Store Inventory System Mobile App</li>
+                <li>Gym Fitness Tracker</li>
+                <li>News App</li>
+                <li>Home Automation (Arduino/ESP32)</li>
+                <li>Student Routine Management Mobile App</li>
+                <li>Tour Sharing Platform Mobile App</li>
+                <li>Language Learning Platform Mobile App</li>
+                <li>Personal Finance Management Mobile App</li>
+                <li>E-Wallet Mobile App</li>
+                <li>News Portal (Backend, Frontend, Mobile App)</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>C/C++, Java, Python Projects</h3>
+            <ul>
+                <li>Server-Client Systems</li>
+                <li>Linked Lists, Hash Tables</li>
+                <li>Socket Programming</li>
+                <li>CUDA (GPU-based parallel programming)</li>
+                <li>Cache Simulation</li>
+                <li>Compiler/Language Parsers</li>
+                <li>Custom Shell</li>
+                <li>DFS Algorithm, BST Algorithm</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p class="contact-subheading">I'd love to hear from you! Feel free to reach out via the form below or connect with me on social media.</p>
+        <div class="form-container">
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="cta-button">
+                    <i class="fas fa-paper-plane"></i> Send
+                </button>
+            </form>
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/amitzero"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/amit-hasan-187bba184"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:me.mail.amit@gmail.com"><i class="fas fa-envelope"></i></a>
+            <!-- Add more social links -->
+        </div>
+    </section>
+</body>
+</html>
