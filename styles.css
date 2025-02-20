@@ -529,7 +529,7 @@ body.dark-mode .social-links a:hover {
 }
 
 .contact {
-    background-image: url('contact-bg.jpg');
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaU7Ld75-8eIXa-kntwG41gxks7vOc6yzjFw&s'); */
     background-size: cover;
     background-position: center;
     color: #ffffff;

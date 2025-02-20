@@ -44,19 +44,33 @@ document.addEventListener('DOMContentLoaded', () => {
     type();
 
     const form = document.querySelector('form');
-    const sendButton = form.querySelector('button[type="submit"]');
-    const requiredFields = form.querySelectorAll('[required]');
 
     form.addEventListener('submit', (event) => {
-        let allFilled = true;
-        requiredFields.forEach(field => {
-            if (!field.value.trim()) {
-                allFilled = false;
+        event.preventDefault();
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
             }
+        }).then(response => {
+            console.log(response);
+            if (response.ok) {
+                alert("Thanks for your submission!");
+                form.reset()
+            } else {
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        alert(data["errors"].map(error => error["message"]).join(", "));
+                    } else {
+                        alert("Oops! There was a problem submitting your form");
+                    }
+                })
+            }
+        }).catch(error => {
+            console.log(error);
+            alert("Oops! There was a problem submitting your form");
         });
-
-        if (!allFilled) {
-            event.preventDefault();
-        }
     });
 });
