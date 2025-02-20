@@ -127,7 +127,7 @@ section {
 }
 
 .about, .skills, .projects, .contact {
-    background-color: #ffffff;
+    background-color: #edfafc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
@@ -192,7 +192,7 @@ section {
 }
 
 .skills-category {
-    flex: 1 1 calc(33.333% - 2rem);
+    width: 100%; /* Ensure each category takes full width */
     background-color: #e0f7fa;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -201,6 +201,7 @@ section {
     border-left: 4px solid #007acc;
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem; /* Add margin between categories */
 }
 
 .skills-category:hover {
@@ -215,8 +216,12 @@ section {
 }
 
 .skills-category ul {
-    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
     padding: 0;
+    list-style: none;
+    justify-items: center; /* Center items to prevent overlapping */
 }
 
 .skills-category ul li {
@@ -229,6 +234,35 @@ section {
 
 .skills-category ul li i {
     color: #007acc;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(240, 240, 240, 0.1); /* Background color with 10% opacity */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    padding: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #ccc; /* Add 1px border on all sides */
+    width: 100px; /* Set fixed width */
+    height: 100px; /* Set fixed height */
+    text-align: center;
+    margin: 0; /* Remove auto margin */
+    font-size: 0.875rem; /* Fix font size */
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
 }
 
 .project {
