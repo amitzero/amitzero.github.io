@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const typingEffect = document.querySelector('.typing-effect');
-    const roles = ["Software Architect", "System Designer", "Developer", "IoT Engineer", "Cybersecurity Enthusiast"];
+    const roles = ["Software Architect", "System Designer", "Full-Stack Developer", "IoT Engineer", "Cybersecurity Enthusiast"];
     let roleIndex = 0;
     let charIndex = 0;
 
