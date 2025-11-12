@@ -83,4 +83,15 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.classList.toggle('active');
         });
     }
+
+    // Skills Accordion
+    const skillCategoryTitles = document.querySelectorAll('.skill-category-title');
+    skillCategoryTitles.forEach(title => {
+        title.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                const skillsGrid = title.nextElementSibling;
+                skillsGrid.classList.toggle('hidden');
+            }
+        });
+    });
 });
