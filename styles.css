@@ -251,9 +251,9 @@ h3 {
     border: 2px solid var(--primary-color);
 }
 
-.skills-grid {
+.skills-grid.icon-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 1rem;
 }
 
@@ -271,14 +271,17 @@ h3 {
 
 .skill-card {
     background-color: var(--card-bg-color);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px var(--shadow-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    font-size: 1.1rem;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 .skill-card i {
