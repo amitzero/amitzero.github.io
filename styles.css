@@ -313,6 +313,17 @@ footer {
     border-top: 1px solid var(--card-bg-color);
 }
 
+.social-links a {
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
 /* Animations */
 .fade-in {
     opacity: 0;
