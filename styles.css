@@ -42,6 +42,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo {
@@ -82,6 +84,37 @@ nav {
     font-size: 1.5rem;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.logo i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.nav-links a {
+    position: relative;
+    padding-bottom: 0.3rem;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
 /* General Sections */
 main > section {
     padding: 6rem 2rem;
@@ -120,16 +153,29 @@ h3 {
     background-color: #007bb5;
 }
 
+.resume-button {
+    margin-top: 1.5rem;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.8rem 1.5rem;
+}
+
+.resume-button:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
 
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 8rem 2rem;
+    padding: 6rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 80vh;
+    min-height: 50vh;
 }
 
 .hero h1 {
@@ -227,6 +273,12 @@ h3 {
 }
 
 /* Contact Form */
+#contact {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .contact-form {
     max-width: 600px;
     margin: 2rem auto 0;
@@ -284,6 +336,7 @@ footer {
         width: 100%;
         background-color: var(--header-bg-color);
         box-shadow: 0 4px 8px var(--shadow-color);
+        padding: 1rem 0;
     }
 
     .nav-links.active {
@@ -293,13 +346,14 @@ footer {
     .nav-links li {
         text-align: center;
         padding: 1rem 0;
-        border-bottom: 1px solid var(--card-bg-color);
+    }
+
+    .nav-links a {
+        padding: 0.5rem 1rem;
     }
 
     .hamburger {
         display: block;
-        cursor: pointer;
-        font-size: 1.5rem;
     }
     .about-container {
         grid-template-columns: 1fr;
