@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,437 +8,243 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script defer src="scripts.js"></script>
 </head>
-<body class="dark-mode">
+<body>
     <header>
         <nav>
             <div class="nav-left">
                 <a href="#home" class="logo"><i class="fas fa-laptop-code"></i> Amit's Portfolio</a>
-                <ul>
-                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-                    <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
-                    <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+            <div class="nav-right">
+                <button id="theme-switcher"><i class="fas fa-moon"></i></button>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <h1>Hi, I'm Amit – Software Architect, System Designer, and Developer</h1>
-        <p class="typing-effect"></p>
-        <button onclick="window.location.href='Amit_Hasan-Resume.pdf'" class="cta-button">
-            <i class="fas fa-download"></i> Download Resume
-        </button>
-    </section>
+    <main>
+        <section id="home" class="hero fade-in">
+            <h1>Hi, I'm Amit</h1>
+            <p class="typing-effect">Software Architect, System Designer, and Developer</p>
+        </section>
 
-    <section id="about" class="about">
-        <div class="about-header">
-            <h2>About Me</h2>
-            <img src="https://avatars.githubusercontent.com/u/66168865" alt="Amit's Photo" class="profile-photo">
-        </div>
-        <p>I am Amit, a Software Architect, System Designer, and Developer with expertise in full-stack development, networking, cybersecurity, and IoT solutions. I have a deep passion for building scalable systems, efficient architectures, and high-performance applications.</p>
-        <p>I specialize in designing end-to-end solutions, from backend architecture to frontend UI, ensuring efficiency, security, and performance in all my projects. My expertise spans network planning, cloud computing, embedded systems, and mobile/web app development.</p>
-        <p><strong>What I Do:</strong></p>
-        <ul class="what-i-do">
-            <li>✅ Software Development: Full-stack development (Frontend & Backend)</li>
-            <li>✅ System Architecture & Design: Structuring scalable and secure systems</li>
-            <li>✅ IoT Solutions: Building smart devices with microcontrollers, and cloud integration</li>
-            <li>✅ Networking & Cybersecurity: VLANs, Servers, Firewalls, Admin Tasks</li>
-            <li>✅ Cloud & Backend Development: Firebase, Google Cloud, DJango, NestJS, ExpressJS, Docker, Kubernetes, Microservices</li>
-            <li>✅ Mobile & Web Development: Native Android, Flutter, React, NextJS, HTML, CSS</li>
-            <li>✅ AI & Automation: Machine learning, process automation, scripting</li>
-        </ul>
-        <p>With a strong background in problem-solving, team leadership, and project management, I ensure that every project I work on is optimized for performance, security, and scalability.</p>
-        <p><strong>Technologies & Tools I Use:</strong></p>
-        <ul class="tech-tools">
-            <li>🔹 Programming Languages: C, C++, C#, Java, Kotlin, Python, JavaScript, TypeScript, PHP, Dart</li>
-            <li>🔹 Development Frameworks & IDEs: Flutter, React, Unity 3D, Android Studio, Arduino Studio, Kali Linux, Visual Studio</li>
-            <li>🔹 Database & Cloud Services: Firebase Firestore, Firebase Functions, Cloud Storage, MySQL, Postgres, MongoDB</li>
-            <li>🔹 Networking & Security: Windows Server, Active Directory, VLANs, Firewalls</li>
-            <li>🔹 DevOps & Containers: Docker, Kubernetes</li>
-        </ul>
-        <p><strong>Why Work With Me?</strong></p>
-        <p>I am a self-motivated, goal-oriented professional who believes in continuous learning and innovation. I take a big-picture approach to problem-solving while ensuring that the smallest details are handled efficiently.</p>
-    </section>
+        <section id="about" class="about fade-in">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="https://github.com/amitzero.png" alt="Amit's Photo" class="profile-photo">
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I am a passionate Software Architect and Developer with a knack for building scalable, high-performance applications. My expertise spans full-stack development, IoT, and cybersecurity. I thrive on solving complex problems and creating elegant, efficient solutions from backend architecture to frontend UI.</p>
+                    <a href="Amit_Hasan-Resume.pdf" class="cta-button resume-button" download><i class="fas fa-download"></i> Download My Resume</a>
+                </div>
+            </div>
+        </section>
 
-    <section id="skills" class="skills">
-        <h2 class="skills-title">Skills</h2>
-        <div class="skills-category">
-            <h3>Programming Languages</h3>
-            <ul>
-                <li class="skill-card">
-                    <img src="assets/C.png" alt="C Icon" class="skill-icon">
-                    <span>C</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/CPlusPlus.png" alt="C++ Icon" class="skill-icon">
-                    <span>C++</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/CSharp.png" alt="C# Icon" class="skill-icon">
-                    <span>C#</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Java.png" alt="Java Icon" class="skill-icon">
-                    <span>Java</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Kotlin.png" alt="Kotlin Icon" class="skill-icon">
-                    <span>Kotlin</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Python.png" alt="Python Icon" class="skill-icon">
-                    <span>Python</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/JavaScript.png" alt="JavaScript Icon" class="skill-icon">
-                    <span>JavaScript</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/TypeScript.png" alt="TypeScript Icon" class="skill-icon">
-                    <span>TypeScript</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/PHP.png" alt="PHP Icon" class="skill-icon">
-                    <span>PHP</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Dart.png" alt="Dart Icon" class="skill-icon">
-                    <span>Dart</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Swift.png" alt="Swift Icon" class="skill-icon">
-                    <span>Swift</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Bash.png" alt="Bash Icon" class="skill-icon">
-                    <span>Bash</span>
-                </li>
-            </ul>
-        </div>
-        <div class="skills-category">
-            <h3>Frameworks & Development Tools</h3>
-            <ul>
-                <li class="skill-card">
-                    <img src="assets/Flutter.png" alt="Flutter Icon" class="skill-icon">
-                    <span>Flutter</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/React.png" alt="React Icon" class="skill-icon">
-                    <span>React</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Nest.js.png" alt="NestJS Icon" class="skill-icon">
-                    <span>NestJS</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Next.js.png" alt="NextJS Icon" class="skill-icon">
-                    <span>NextJS</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Django.png" alt="DJango Icon" class="skill-icon">
-                    <span>DJango</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/PostgresSQL.png" alt="PostgresSQL Icon" class="skill-icon">
-                    <span>PostgresSQL</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Firebase.png" alt="Firebase Icon" class="skill-icon">
-                    <span>Firebase</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Docker.png" alt="Docker Icon" class="skill-icon">
-                    <span>Docker</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Arduino.png" alt="Arduino Icon" class="skill-icon">
-                    <span>Arduino</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Unity.png" alt="Unity 3D Icon" class="skill-icon">
-                    <span>Unity 3D</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Android-Studio.png" alt="Android Studio Icon" class="skill-icon">
-                    <span>Android Studio</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Visual-Studio.png" alt="Visual Studio Icon" class="skill-icon">
-                    <span>Visual Studio</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Linux.png" alt="Kali Linux Icon" class="skill-icon">
-                    <span>Kali Linux</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Figma.png" alt="Figma Icon" class="skill-icon">
-                    <span>Figma (UI/UX)</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Adobe-XD.png" alt="Adobe-XD Icon" class="skill-icon">
-                    <span>Adobe-XD (UI/UX)</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Canva.png" alt="Canva Icon" class="skill-icon">
-                    <span>Canva</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Git.png" alt="Git Icon" class="skill-icon">
-                    <span>Git</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/GitHub-Codespaces.png" alt="GitHub Codespaces Icon" class="skill-icon">
-                    <span>GitHub Codespaces</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/GitHub-Actions.png" alt="GitHub Actions Icon" class="skill-icon">
-                    <span>GitHub Actions</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Google-Cloud.png" alt="Google Cloud Icon" class="skill-icon">
-                    <span>Google Cloud</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/GraphQL.png" alt="GraphQL Sheets Icon" class="skill-icon">
-                    <span>GraphQL</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/Socket.io.png" alt="Socket IO Icon" class="skill-icon">
-                    <span>Socket IO</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/SQLite.png" alt="SQLite Icon" class="skill-icon">
-                    <span>SQLite</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/SSH.png" alt="SSH Icon" class="skill-icon">
-                    <span>SSH</span>
-                </li>
-                <li class="skill-card">
-                    <img src="assets/TensorFlow.png" alt="TensorFlow Icon" class="skill-icon">
-                    <span>TensorFlow</span>
-                </li>
-            </ul>
-        </div>
-        <div class="skills-category">
-            <h3>Networking & Cybersecurity Knowledge</h3>
-            <ul>
-                <li class="skill-card">
-                    <!-- <img src="assets/NetworkX.png" alt="Network Planning Icon" class="skill-icon"> -->
-                    <span>Network planning</span>
-                </li>
-                <li class="skill-card">
-                    <!-- <img src="assets/NetworkX.png" alt="Subnetting Icon" class="skill-icon"> -->
-                    <span>Subnetting</span>
-                </li>
-                <li class="skill-card">
-                    <!-- <img src="path/to/dhcp-icon.png" alt="DHCP Icon" class="skill-icon"> -->
-                    <span>DHCP</span>
-                </li>
-                <li class="skill-card">
-                    <!-- <img src="path/to/dns-icon.png" alt="DNS Icon" class="skill-icon"> -->
-                    <span>DNS</span>
-                </li>
-                <li class="skill-card">
-                    <!-- <img src="path/to/routers-icon.png" alt="Routers Icon" class="skill-icon"> -->
-                    <span>Routers</span>
-                </li>
-                <li class="skill-card">
-                    <!-- <img src="path/to/switches-icon.png" alt="Switches Icon" class="skill-icon"> -->
-                    <span>Switches</span>
-                </li>
-                <li class="skill-card">
-                    <!-- <img src="path/to/servers-icon.png" alt="Servers Icon" class="skill-icon"> -->
-                    <span>Servers</span>
-                </li>
-                <li class="skill-card">
-                    <!-- <img src="path/to/windows-server-icon.png" alt="Windows Server Icon" class="skill-icon"> -->
-                    <span>Windows Server</span>
-                </li>
-                <li class="skill-card">
-                    <!-- <img src="path/to/active-directory-icon.png" alt="Active Directory Icon" class="skill-icon"> -->
-                    <span>Active Directory</span>
-                </li>
-                <li class="skill-card">
-                    <!-- <img src="path/to/cybersecurity-icon.png" alt="Cybersecurity Icon" class="skill-icon"> -->
-                    <span>Cybersecurity best practices</span>
-                </li>
-            </ul>
-        </div>
-        <div class="skills-category">
-            <h3>Soft Skills</h3>
-            <ul>
-                <li class="skill-card">
-                    <!-- <img src="path/to/problem-solving-icon.png" alt="Problem-solving Icon" class="skill-icon"> -->
-                    <span>Problem-solving</span>
-                </li>
-                <li class="skill-card">
-                    <!-- <img src="path/to/team-leadership-icon.png" alt="Team leadership Icon" class="skill-icon"> -->
-                    <span>Team leadership</span>
-                </li>
-                <li class="skill-card">
-                    <!-- <img src="path/to/active-listening-icon.png" alt="Active listening Icon" class="skill-icon"> -->
-                    <span>Active listening</span>
-                </li>
-                <li class="skill-card">
-                    <!-- <img src="path/to/self-starter-icon.png" alt="Self-starter Icon" class="skill-icon"> -->
-                    <span>Self-starter</span>
-                </li>
-                <li class="skill-card">
-                    <!-- <img src="path/to/seo-icon.png" alt="SEO Icon" class="skill-icon"> -->
-                    <span>SEO</span>
-                </li>
-                <li class="skill-card">
-                    <!-- <img src="path/to/data-analysis-icon.png" alt="Data analysis Icon" class="skill-icon"> -->
-                    <span>Data analysis</span>
-                </li>
-                <li class="skill-card">
-                    <!-- <img src="path/to/automation-tools-icon.png" alt="Automation tools Icon" class="skill-icon"> -->
-                    <span>Automation tools</span>
-                </li>
-            </ul>
-        </div>
-    </section>
+        <section id="skills" class="skills fade-in">
+            <h2>My Technical Expertise</h2>
+            <div class="skills-categories-container">
+                <!-- Category 1: Core Programming & Development -->
+                <div class="skill-category-card">
+                    <h3 class="skill-category-title"><i class="fas fa-laptop-code"></i> Core Programming & Development</h3>
+                    <div class="skills-grid icon-grid">
+                        <div class="skill-card"><i class="fas fa-code"></i><span>C/C++/C#</span></div>
+                        <div class="skill-card"><i class="fab fa-java"></i><span>Java/Kotlin</span></div>
+                        <div class="skill-card"><i class="fab fa-python"></i><span>Python</span></div>
+                        <div class="skill-card"><i class="fab fa-js"></i><span>JavaScript/TS</span></div>
+                        <div class="skill-card"><i class="fab fa-php"></i><span>PHP</span></div>
+                        <div class="skill-card"><i class="fas fa-mobile-alt"></i><span>Dart/Flutter</span></div>
+                        <div class="skill-card"><i class="fab fa-swift"></i><span>Swift</span></div>
+                        <div class="skill-card"><i class="fas fa-terminal"></i><span>Bash</span></div>
+                        <div class="skill-card"><i class="fab fa-react"></i><span>React/Next.js</span></div>
+                        <div class="skill-card"><i class="fas fa-server"></i><span>NestJS/Express</span></div>
+                        <div class="skill-card"><i class="fab fa-python"></i><span>Django/Flask</span></div>
+                        <div class="skill-card"><i class="fab fa-laravel"></i><span>Laravel</span></div>
+                        <div class="skill-card"><i class="fas fa-project-diagram"></i><span>GraphQL</span></div>
+                        <div class="skill-card"><i class="fas fa-brain"></i><span>TensorFlow</span></div>
+                        <div class="skill-card"><i class="fab fa-unity"></i><span>Unity 3D</span></div>
+                        <div class="skill-card"><i class="fas fa-desktop"></i><span>Electron</span></div>
+                        <div class="skill-card"><i class="fas fa-paint-brush"></i><span>TailwindCSS</span></div>
+                        <div class="skill-card"><i class="fab fa-bootstrap"></i><span>Bootstrap</span></div>
+                    </div>
+                </div>
 
-    <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>ZeCon (Messaging App for Zero Inn)</h3>
-            <p>An email-based messaging app similar to WhatsApp, but without requiring phone numbers or status updates.</p>
-            <p><strong>Tech Stack:</strong> Flutter, Firebase (Firestore, Firebase Auth, Firebase Functions)</p>
-            <p><strong>Key Features:</strong></p>
-            <ul>
-                <li>Secure email-based messaging</li>
-                <li>End-to-end encryption</li>
-                <li>Real-time chat</li>
-                <li>Cross-platform (Android, iOS, Web)</li>
-            </ul>
-            <!-- <a href="https://github.com/amit/zecon" class="project-link">GitHub</a> -->
-        </div>
-        <div class="project">
-            <h3>Orang Asli Student Transportation & Attendance System</h3>
-            <p>A government-backed system for tracking school buses and students. It enables teachers to scan student IDs for attendance and provides real-time tracking of school transportation.</p>
-            <p><strong>Tech Stack:</strong> Flutter (Mobile App + Web Dashboard), Firebase (Firestore, Firebase Functions, Firebase Auth)</p>
-            <p><strong>Key Features:</strong></p>
-            <ul>
-                <li>Teacher App: Scans RFID/QR codes for attendance</li>
-                <li>Driver App: Tracks students onboard</li>
-                <li>Admin Dashboard: Shows live vehicle locations, trip data, statistics, and reports</li>
-                <li>Firebase Functions: Automatic backups, real-time indexing for fast search</li>
-            </ul>
-            <!-- <a href="#" class="project-link">GitHub</a> -->
-        </div>
-        <div class="project">
-            <h3>Buraq Oil Tanker Tracking System</h3>
-            <p>A tracking system for Buraq Oil Company to monitor tankers, track orders, and prevent deviations from assigned routes.</p>
-            <p><strong>Tech Stack:</strong> Flutter (Web + Mobile App), Firebase (Firestore, Firebase Functions)</p>
-            <p><strong>Key Features:</strong></p>
-            <ul>
-                <li>Tracks tanker locations in real time</li>
-                <li>Sends alerts if a tanker deviates from route</li>
-                <li>Displays order details, fuel type, delivery status</li>
-                <li>Role-based access (Admins see full data, Moderators have restricted views)</li>
-            </ul>
-            <!-- <a href="#" class="project-link">GitHub</a> -->
-        </div>
-        <div class="project">
-            <h3>IoT-Based Smart Attendance System (ESP32 + RFID) [Future Implementation]</h3>
-            <p>A planned smart attendance system that will use RFID tags & IoT to mark student attendance in schools.</p>
-            <p><strong>Tech Stack:</strong> ESP32 microcontroller, Firebase (for cloud database)</p>
-            <p><strong>Planned Features:</strong></p>
-            <ul>
-                <li>RFID scanning for student check-ins</li>
-                <li>Real-time data upload using IoT (No Wi-Fi required)</li>
-                <li>Integration with Orang Asli Student Transportation System</li>
-            </ul>
-            <!-- <a href="#" class="project-link">GitHub</a> -->
-        </div>
-        <div class="project">
-            <h3>Online Course Management App (Not Fully Completed)</h3>
-            <p>A mobile app that provides an online learning platform with courses, quizzes, and progress tracking.</p>
-            <p><strong>Tech Stack:</strong> Flutter, Firebase (Firestore, Firebase Auth, Firebase Storage)</p>
-            <p><strong>Key Features:</strong></p>
-            <ul>
-                <li>User authentication (Email/Google Sign-in)</li>
-                <li>Enroll in courses, watch videos, complete quizzes</li>
-                <li>Firebase push notifications for updates</li>
-                <li>Progress tracking and certification system</li>
-            </ul>
-            <!-- <a href="#" class="project-link">GitHub</a> -->
-        </div>
-        <div class="project">
-            <h3>Modular House Design System (Currently in Development)</h3>
-            <p>A software tool for designing prefabricated houses with customizable layouts and materials.</p>
-            <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
-            <p><strong>Key Features:</strong></p>
-            <ul>
-                <li>3D visualization of house designs</li>
-                <li>Customizable options for materials and layouts</li>
-                <li>Optimized for 70–100 year durability in Bangladesh</li>
-            </ul>
-            <!-- <a href="#" class="project-link">GitHub</a> -->
-        </div>
-        <div class="project">
-            <h3>Other Completed Projects</h3>
-            <ul>
-                <li>Printer Firmware</li>
-                <li>Store Inventory System Mobile App</li>
-                <li>Gym Fitness Tracker</li>
-                <li>News App</li>
-                <li>Home Automation (Arduino/ESP32)</li>
-                <li>Student Routine Management Mobile App</li>
-                <li>Tour Sharing Platform Mobile App</li>
-                <li>Language Learning Platform Mobile App</li>
-                <li>Personal Finance Management Mobile App</li>
-                <li>E-Wallet Mobile App</li>
-                <li>News Portal (Backend, Frontend, Mobile App)</li>
-            </ul>
-        </div>
-        <div class="project">
-            <h3>C/C++, Java, Python Projects</h3>
-            <ul>
-                <li>Server-Client Systems</li>
-                <li>Linked Lists, Hash Tables</li>
-                <li>Socket Programming</li>
-                <li>CUDA (GPU-based parallel programming)</li>
-                <li>Cache Simulation</li>
-                <li>Compiler/Language Parsers</li>
-                <li>Custom Shell</li>
-                <li>Searching Algorithms (Binary Search, Linear Search, DFS, BST)</li>
-                <li>Sorting Algorithms (Quick Sort, Merge Sort, Heap Sort)</li>
-                <li>Graph Algorithms (Dijkstra's)</li>
-            </ul>
-        </div>
-    </section>
+                <!-- Category 2: Backend, System Architecture & DevOps -->
+                <div class="skill-category-card devops-card">
+                    <h3 class="skill-category-title"><i class="fas fa-cogs"></i> Backend, System Architecture & DevOps</h3>
+                    <div class="skills-grid icon-grid">
+                        <div class="skill-card"><i class="fab fa-docker"></i><span>Docker/Compose</span></div>
+                        <div class="skill-card"><i class="fas fa-cogs"></i><span>Kubernetes/K3s</span></div>
+                        <div class="skill-card"><i class="fas fa-network-wired"></i><span>Microservices</span></div>
+                        <div class="skill-card"><i class="fas fa-exchange-alt"></i><span>gRPC/REST</span></div>
+                        <div class="skill-card"><i class="fas fa-server"></i><span>Nginx/Caddy</span></div>
+                        <div class="skill-card"><i class="fas fa-shield-alt"></i><span>WireGuard/OpenVPN</span></div>
+                        <div class="skill-card"><i class="fab fa-ubuntu"></i><span>Ubuntu Server</span></div>
+                        <div class="skill-card"><i class="fas fa-terminal"></i><span>SSH Hardening</span></div>
+                        <div class="skill-card"><i class="fab fa-github-alt"></i><span>GitHub Actions</span></div>
+                        <div class="skill-card"><i class="fas fa-rocket"></i><span>CI/CD Pipelines</span></div>
+                        <div class="skill-card"><i class="fas fa-lock"></i><span>OAuth2/JWT</span></div>
+                        <div class="skill-card"><i class="fas fa-key"></i><span>Ory Stack</span></div>
+                    </div>
+                </div>
 
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p class="contact-subheading">I'd love to hear from you! Feel free to reach out via the form below or connect with me on social media.</p>
-        <div class="form-container">
-            <form
-                action="https://formspree.io/f/xldgzrzn"
-                method="POST"
-            >
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit" class="cta-button">
-                    <i class="fas fa-paper-plane"></i> Send
-                </button>
+                <!-- Category 3: Cloud, Database & Networking -->
+                <div class="skill-category-card">
+                    <h3 class="skill-category-title"><i class="fas fa-cloud"></i> Cloud, Database & Networking</h3>
+                    <div class="skills-grid icon-grid">
+                        <div class="skill-card"><i class="fab fa-google"></i><span>Google Cloud</span></div>
+                        <div class="skill-card"><i class="fab fa-aws"></i><span>AWS (Basics)</span></div>
+                        <div class="skill-card"><i class="fab fa-digital-ocean"></i><span>DigitalOcean</span></div>
+                        <div class="skill-card"><i class="fas fa-database"></i><span>PostgreSQL</span></div>
+                        <div class="skill-card"><i class="fas fa-database"></i><span>MySQL/SQLite</span></div>
+                        <div class="skill-card"><i class="fas fa-leaf"></i><span>MongoDB</span></div>
+                        <div class="skill-card"><i class="fas fa-fire"></i><span>Firebase</span></div>
+                        <div class="skill-card"><i class="fas fa-database"></i><span>Redis</span></div>
+                        <div class="skill-card"><i class="fas fa-network-wired"></i><span>Subnetting/VLANs</span></div>
+                        <div class="skill-card"><i class="fas fa-server"></i><span>DNS/DHCP</span></div>
+                        <div class="skill-card"><i class="fas fa-shield-alt"></i><span>Cybersecurity</span></div>
+                        <div class="skill-card"><i class="fas fa-sitemap"></i><span>Network Design</span></div>
+                    </div>
+                </div>
+
+                <!-- Category 4: Tools, Platforms & Soft Skills -->
+                <div class="skill-category-card">
+                    <h3 class="skill-category-title"><i class="fas fa-tools"></i> Tools, Platforms & Soft Skills</h3>
+                    <div class="skills-grid icon-grid">
+                        <div class="skill-card"><i class="fab fa-git-alt"></i><span>Git/GitHub</span></div>
+                        <div class="skill-card"><i class="fas fa-code"></i><span>VS Code</span></div>
+                        <div class="skill-card"><i class="fab fa-figma"></i><span>Figma</span></div>
+                        <div class="skill-card"><i class="fas fa-rocket"></i><span>Postman/Insomnia</span></div>
+                        <div class="skill-card"><i class="fas fa-users"></i><span>Team Leadership</span></div>
+                        <div class="skill-card"><i class="fas fa-lightbulb"></i><span>Problem-Solving</span></div>
+                        <div class="skill-card"><i class="fas fa-sitemap"></i><span>System Planning</span></div>
+                        <div class="skill-card"><i class="fas fa-pencil-alt"></i><span>Technical Writing</span></div>
+                        <div class="skill-card"><i class="fas fa-robot"></i><span>Automation</span></div>
+                        <div class="skill-card"><i class="fas fa-chalkboard-teacher"></i><span>Mentoring</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects fade-in">
+            <h2>Application Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>ZeCon Messaging App</h3>
+                    <p>A cross-platform, email-based messaging application enabling seamless communication across devices.</p>
+                    <div class="project-details">
+                        <p><strong>Tech Stack:</strong> Flutter, Firebase</p>
+                        <p><strong>Key Features:</strong> Email-based authentication, real-time messaging, cross-platform support.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Orang Asli Student Transport & Attendance</h3>
+                    <p>A real-time tracking and attendance system for students and school buses to enhance safety and efficiency.</p>
+                     <div class="project-details">
+                        <p><strong>Tech Stack:</strong> Flutter, Firebase</p>
+                        <p><strong>Key Features:</strong> Real-time GPS tracking, attendance management, role-based access.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Buraq Oil Tanker Tracking</h3>
+                    <p>A role-based, real-time monitoring system for oil tankers to provide secure and accurate logistics data.</p>
+                     <div class="project-details">
+                        <p><strong>Tech Stack:</strong> Flutter, Firebase</p>
+                        <p><strong>Key Features:</strong> Role-based access control, real-time monitoring, secure data handling.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>IoT Smart Attendance System</h3>
+                    <p>A planned project to develop an IoT-based attendance system for automated and efficient tracking.</p>
+                     <div class="project-details">
+                        <p><strong>Tech Stack:</strong> ESP32, RFID</p>
+                        <p><strong>Key Features:</strong> Automated attendance, RFID integration, real-time data sync.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Online Course Management App</h3>
+                    <p>A mobile application for managing and tracking progress in online courses.</p>
+                     <div class="project-details">
+                        <p><strong>Tech Stack:</strong> Flutter, Firebase</p>
+                        <p><strong>Key Features:</strong> Course tracking, progress monitoring, user management.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Modular House Design System</h3>
+                    <p>An interactive web-based system for designing and visualizing modular houses in 3D.</p>
+                     <div class="project-details">
+                        <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+                        <p><strong>Key Features:</strong> 3D visualization, drag-and-drop interface, customization options.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Other Projects</h3>
+                    <p>Includes printer firmware, inventory system app, gym tracker, news app, home automation, student routine app, tour sharing app, language learning app, personal finance app, and a full-stack news portal.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Algorithms & Systems</h3>
+                    <p>Experience in designing server-client architectures, socket programming, sorting/searching/graph algorithms, CUDA, compiler parsers, cache simulation, and building a custom shell.</p>
+                </div>
+            </div>
+
+            <h2 class="subsection-title">Infrastructure & Systems Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>K3s + Microservice Cluster Setup</h3>
+                    <p>A full-stack microservice demo with gRPC, Nginx, WireGuard, and PostgreSQL.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Self-hosted Ory Authentication Stack</h3>
+                    <p>Integrated Kratos, Keto, and Oathkeeper for role-based authentication.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Private VPN-Linked Server Network</h3>
+                    <p>Home and cloud server bridged with WireGuard and a reverse proxy setup.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Custom CI/CD Deployment Pipeline</h3>
+                    <p>Docker-based staging and production rollout automation.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Ubuntu Server Automation Scripts</h3>
+                    <p>Deployment and maintenance utilities for Ubuntu servers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact fade-in">
+            <h2>Get In Touch</h2>
+            <p>I'm always open to discussing new projects, creative ideas, or opportunities. Fill out the form below, and I'll get back to you!</p>
+            <!-- Replace YOUR_FORM_ID with your actual Formspree form ID -->
+            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Send Message</button>
             </form>
-        </div>
+        </section>
+    </main>
+
+    <footer>
         <div class="social-links">
-            <a href="https://github.com/amitzero"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/amit-hasan-187bba184"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:me.mail.amit@gmail.com"><i class="fas fa-envelope"></i></a>
-            <!-- Add more social links -->
+            <a href="https://github.com/amitzero" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/amitzero" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
-    </section>
+        <p>&copy; 2024 Amit Hasan. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
