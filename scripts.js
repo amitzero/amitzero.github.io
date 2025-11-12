@@ -1,76 +1,86 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-    const body = document.body;
+    // Theme Switcher
+    const themeSwitcher = document.getElementById('theme-switcher');
+    const docElement = document.documentElement;
+    const sunIcon = '<i class="fas fa-sun"></i>';
+    const moonIcon = '<i class="fas fa-moon"></i>';
 
-    // Set default mode to dark
-    body.classList.add('dark-mode');
-    darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const currentTheme = localStorage.getItem('theme');
 
-    darkModeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        if (body.classList.contains('dark-mode')) {
-            darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    if (currentTheme === 'dark' || (!currentTheme && prefersDarkMode)) {
+        docElement.setAttribute('data-theme', 'dark');
+        themeSwitcher.innerHTML = sunIcon;
+    } else {
+        docElement.setAttribute('data-theme', 'light');
+        themeSwitcher.innerHTML = moonIcon;
+    }
+
+    themeSwitcher.addEventListener('click', () => {
+        if (docElement.getAttribute('data-theme') === 'dark') {
+            docElement.setAttribute('data-theme', 'light');
+            themeSwitcher.innerHTML = moonIcon;
+            localStorage.setItem('theme', 'light');
         } else {
-            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            docElement.setAttribute('data-theme', 'dark');
+            themeSwitcher.innerHTML = sunIcon;
+            localStorage.setItem('theme', 'dark');
         }
     });
 
+    // Typing Effect
     const typingEffect = document.querySelector('.typing-effect');
-    const roles = ["Software Architect", "System Designer", "Full-Stack Developer", "IoT Engineer", "Cybersecurity Enthusiast"];
-    let roleIndex = 0;
-    let charIndex = 0;
+    if (typingEffect) {
+        const textArray = ["Software Architect", "System Designer", "Developer"];
+        let textArrayIndex = 0;
+        let charIndex = 0;
 
-    function type() {
-        if (charIndex < roles[roleIndex].length) {
-            typingEffect.textContent += roles[roleIndex].charAt(charIndex);
-            charIndex++;
-            setTimeout(type, 100);
-        } else {
-            setTimeout(erase, 2000);
-        }
-    }
-
-    function erase() {
-        if (charIndex > 0) {
-            typingEffect.textContent = roles[roleIndex].substring(0, charIndex - 1);
-            charIndex--;
-            setTimeout(erase, 100);
-        } else {
-            roleIndex = (roleIndex + 1) % roles.length;
-            setTimeout(type, 1000);
-        }
-    }
-
-    type();
-
-    const form = document.querySelector('form');
-
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        var data = new FormData(event.target);
-        fetch(event.target.action, {
-            method: form.method,
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            console.log(response);
-            if (response.ok) {
-                alert("Thanks for your submission!");
-                form.reset()
+        function type() {
+            if (charIndex < textArray[textArrayIndex].length) {
+                typingEffect.textContent += textArray[textArrayIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 100);
             } else {
-                response.json().then(data => {
-                    if (Object.hasOwn(data, 'errors')) {
-                        alert(data["errors"].map(error => error["message"]).join(", "));
-                    } else {
-                        alert("Oops! There was a problem submitting your form");
-                    }
-                })
+                setTimeout(erase, 2000);
             }
-        }).catch(error => {
-            console.log(error);
-            alert("Oops! There was a problem submitting your form");
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                typingEffect.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, 50);
+            } else {
+                textArrayIndex++;
+                if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+                setTimeout(type, 1000);
+            }
+        }
+        typingEffect.textContent = "";
+        type();
+    }
+
+    // Scroll Animations
+    const fadeIns = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
         });
+    }, { threshold: 0.1 });
+
+    fadeIns.forEach(fadeIn => {
+        observer.observe(fadeIn);
     });
+
+    // Responsive Navigation
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
 });
